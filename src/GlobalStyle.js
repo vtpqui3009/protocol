@@ -6,6 +6,9 @@ export const StyledHeader = styled.nav`
   right: 0;
   background: #434343;
   z-index: 10;
+  @media (max-width: 480px) {
+    padding: 0 2rem;
+  }
 `;
 export const StyledHeaderLink = styled.div`
   & > span {

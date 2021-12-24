@@ -3,13 +3,15 @@ import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import Header from "../../layout/Header/Header";
 const StyledUpdatingPage = styled.div`
-  linh-height: 1.6;
+  linh-height: 1.7;
+  height: 100%;
   width: 100%;
+  padding: 5% 0;
   background-color: #333;
   color: #fff;
   font-size: 1.6rem;
   & > .container > .white-paper__content {
-    padding: 10rem 0;
+    padding: 8rem 4rem;
   }
 `;
 const UpdatingPage = () => {

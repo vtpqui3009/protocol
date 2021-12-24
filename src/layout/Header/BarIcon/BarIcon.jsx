@@ -12,6 +12,19 @@ const StyledBarLink = styled.div`
     padding: 1rem 2rem;
   }
 `;
+const StyledOffcanvasHeader = styled.span`
+  display: none;
+  cursor: pointer;
+  @media (max-width: 480px) {
+    display: block;
+    font-size: 3rem;
+    color: white;
+    dispplay: block;
+    margin-left: auto;
+    padding: 0 2rem;
+    transform: rotate(45deg);
+  }
+`;
 const BarIcon = ({ name, ...props }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -25,6 +38,9 @@ const BarIcon = ({ name, ...props }) => {
         {...props}
         style={{ backgroundColor: "#434343" }}
       >
+        <Offcanvas.Header>
+          <StyledOffcanvasHeader onClick={handleClose}>+</StyledOffcanvasHeader>
+        </Offcanvas.Header>
         <Offcanvas.Body>
           <StyledBarLink>
             <NavBar class={"d-flex flex-column"} />

@@ -24,7 +24,7 @@ const StyledRoadMap = styled.div`
   & > #roadmap-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem 4rem;
+    gap: 2rem;
     border: 1px solid #ffffff;
     padding: 2rem;
     border-radius: 1rem;
@@ -45,7 +45,7 @@ const StyledRoadMap = styled.div`
 const RoadMap = () => {
   return (
     <StyledRoadMap id="roadmap" className="container">
-      <h1>This is RoadMap</h1>
+      <h1>RoadMap</h1>
       <div id="roadmap-heading">
         <img src={RoadmapImage} alt="" />
       </div>

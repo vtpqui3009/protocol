@@ -44,6 +44,8 @@ const StyledTokenMetric = styled.div`
         font-family: "Black Ops One", cursive;
         color: #ff4d4d;
         font-size: 4rem;
+        display: flex;
+        align-items: center;
         @media (max-width: 1024px) {
           position: absolute;
           top: 50%;
@@ -55,6 +57,9 @@ const StyledTokenMetric = styled.div`
         }
         & > span {
           color: #ffffff;
+          @media (max-width: 1024px) {
+            font-size: 2rem;
+          }
         }
       }
     }
