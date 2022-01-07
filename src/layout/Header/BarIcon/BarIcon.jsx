@@ -8,8 +8,10 @@ const StyledBarIcon = styled.i`
   color: white;
 `;
 const StyledBarLink = styled.div`
-  & > div > span {
+  & > div > span,
+  & > div > a {
     padding: 1rem 2rem;
+    cursor: pointer;
   }
 `;
 const StyledOffcanvasHeader = styled.span`

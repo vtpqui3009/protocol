@@ -3,10 +3,10 @@ import styled from "styled-components";
 import { Col, Row } from "react-bootstrap";
 import contactsData from "./contactsData";
 import BreakingLine from "../../../components/UI/BreakingLine";
+
 const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
-  ${"" /* height: 100vh; */}
   color: #ffffff;
   padding: 0 4rem;
   & > #contact-social {
@@ -53,9 +53,9 @@ const StyledContainer = styled.div`
     }
   }
 `;
-const ContactUs = () => {
+const ContactUs = ({ contactUsRef }) => {
   return (
-    <StyledContainer className="container" id="contact-us">
+    <StyledContainer className="container" id="contact-us" ref={contactUsRef}>
       <h1 id="contact-heading">Contact us</h1>
       <Row id="contact-flex-box">
         <Col id="contact-form">
@@ -77,14 +77,6 @@ const ContactUs = () => {
             </div>
           </Row>
         </Col>
-        {/* <Col id="contact-maps">
-          <img
-            src="https://images.unsplash.com/photo-1639325492451-c32e9d70f3c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
-            alt=""
-            width="100%"
-            height="100%"
-          />
-        </Col> */}
       </Row>
       <Row id="contact-social">
         {contactsData.map((item) => {

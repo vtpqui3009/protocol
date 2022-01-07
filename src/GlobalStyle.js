@@ -11,15 +11,15 @@ export const StyledHeader = styled.nav`
   }
 `;
 export const StyledHeaderLink = styled.div`
-  & > span {
+  & > span,
+  & > a {
     line-height: 3rem;
     margin-right: 3.6rem;
-  }
-  & > span > a {
     text-decoration: none;
     color: #ffffff;
     transition: 0.2s ease-in-out;
     font-size: 1.6rem;
+    cursor: pointer;
     &:hover {
       color: #e6007a;
     }

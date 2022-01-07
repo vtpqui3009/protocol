@@ -1,11 +1,16 @@
 import React from "react";
-import linksData from "./linksData";
 import { StyledHeaderLink } from "../../../GlobalStyle";
 import { Link } from "react-router-dom";
 const NavBar = (props) => {
   return (
     <StyledHeaderLink className={props.class}>
-      {linksData.map((item) => {
+      <Link to="/">Home</Link>
+      <Link to="/white-paper">White Paper</Link>
+      <span onClick={props.onTokenSection}>Token</span>
+      <span onClick={props.onRoadmapSection}>Roadmap</span>
+      <span onClick={props.onContactSection}>Contact us</span>
+      <span onClick={props.onAboutSection}>About us</span>
+      {/* {linksData.map((item) => {
         const render =
           item.option === "normal" ? (
             <a key={item.id} href={item.href}>
@@ -18,7 +23,7 @@ const NavBar = (props) => {
             </Link>
           );
         return <span key={item.id}>{render}</span>;
-      })}
+      })} */}
     </StyledHeaderLink>
   );
 };

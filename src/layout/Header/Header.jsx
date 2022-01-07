@@ -4,9 +4,9 @@ import NavBar from "./NavBar/Navbar";
 import BarIcon from "./BarIcon/BarIcon";
 import { StyledHeader } from "../../GlobalStyle";
 import Logo from "../../components/Image/Logo";
-const Header = () => {
+const Header = (props) => {
   return (
-    <StyledHeader>
+    <StyledHeader id="header">
       <Navbar>
         <Container>
           <Navbar.Brand>
@@ -16,7 +16,13 @@ const Header = () => {
             <BarIcon key={idx} placement={placement} name={placement} />
           ))}
           <Nav className="ms-auto d-none d-xl-block">
-            <NavBar class={"d-flex flex-row"} />
+            <NavBar
+              class={"d-flex flex-row"}
+              onTokenSection={props.onTokenSection}
+              onRoadmapSection={props.onRoadmapSection}
+              onContactSection={props.onContactSection}
+              onAboutSection={props.onAboutSection}
+            />
           </Nav>
         </Container>
       </Navbar>

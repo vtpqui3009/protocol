@@ -88,9 +88,9 @@ const StyledTokenMetric = styled.div`
     }
   }
 `;
-const TokenMetric = () => {
+const TokenMetric = ({ tokenRef }) => {
   return (
-    <StyledTokenMetric id="token" className="container">
+    <StyledTokenMetric id="token" className="container" ref={tokenRef}>
       <h1>Token Metrics</h1>
       <div id="token-chart">
         <img src={TokenChart} alt="token-chart" width="60%" height="60%" />

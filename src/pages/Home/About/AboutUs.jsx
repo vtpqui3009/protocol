@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import AboutUsImage from "../../../assets/images/about-us.svg";
+
 const StyledAbousUs = styled.div`
   color: #ffffff;
   margin-top: 5%;
@@ -17,9 +18,9 @@ const StyledAbousUs = styled.div`
     padding-bottom: 5%;
   }
 `;
-const AboutUs = () => {
+const AboutUs = ({ aboutUsRef }) => {
   return (
-    <StyledAbousUs className="container" id="about-us">
+    <StyledAbousUs className="container" id="about-us" ref={aboutUsRef}>
       <h1>About Us</h1>
       <img src={AboutUsImage} alt="" />
     </StyledAbousUs>

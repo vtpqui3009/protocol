@@ -42,9 +42,9 @@ const StyledRoadMap = styled.div`
     }
   }
 `;
-const RoadMap = () => {
+const RoadMap = ({ roadmapRef }) => {
   return (
-    <StyledRoadMap id="roadmap" className="container">
+    <StyledRoadMap id="roadmap" className="container" ref={roadmapRef}>
       <h1>RoadMap</h1>
       <div id="roadmap-heading">
         <img src={RoadmapImage} alt="" />
