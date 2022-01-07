@@ -14,15 +14,12 @@ const Home = () => {
   const aboutUsRef = useRef();
   const scrollToTokenSection = () => {
     scrollElementIntoView(tokenRef.current, "smooth");
-    console.log("THis is working ....");
   };
   const scrollToRoadmapSection = () => {
     scrollElementIntoView(roadmapRef.current, "smooth");
-    console.log("THis is working ....");
   };
   const scrollToContactSection = () => {
     scrollElementIntoView(contactUsRef.current, "smooth");
-    console.log("THis is working ....");
   };
   const scrollToAboutSection = () => {
     scrollElementIntoView(aboutUsRef.current, "smooth");
