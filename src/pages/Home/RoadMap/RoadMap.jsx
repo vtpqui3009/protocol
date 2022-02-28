@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import RoadmapImage from "../../../assets/images/roadmap.svg";
 import RoadMapGridItem from "./RoadMapGridItem";
 import BreakingLine from "../../../components/UI/BreakingLine";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const StyledRoadMap = styled.div`
   color: #ffffff;
+  overflow: hidden;
   & > h1 {
     text-align: center;
     padding: 4rem 0;
@@ -43,11 +46,23 @@ const StyledRoadMap = styled.div`
   }
 `;
 const RoadMap = ({ roadmapRef }) => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <StyledRoadMap id="roadmap" className="container" ref={roadmapRef}>
       <h1>RoadMap</h1>
       <div id="roadmap-heading">
-        <img src={RoadmapImage} alt="" />
+        <img
+          src={RoadmapImage}
+          alt=""
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="600"
+          data-aos-anchor-placement="center-bottom"
+        />
       </div>
       <div id="roadmap-grid">
         <RoadMapGridItem
@@ -58,6 +73,10 @@ const RoadMap = ({ roadmapRef }) => {
               <li>$MAC IDO</li>
             </React.Fragment>
           }
+          data-aos="fade-up-right"
+          data-aos-offset="200"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="900"
         />
         <RoadMapGridItem
           chilren={
@@ -67,6 +86,10 @@ const RoadMap = ({ roadmapRef }) => {
               <li>Set up events to buy and sell adult actors NFTs</li>
             </React.Fragment>
           }
+          data-aos="fade-up-right"
+          data-aos-offset="200"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="600"
         />
         <RoadMapGridItem
           chilren={
@@ -79,6 +102,10 @@ const RoadMap = ({ roadmapRef }) => {
               <li>Pay actors according to the donation system</li>
             </React.Fragment>
           }
+          data-aos="fade-up-left"
+          data-aos-offset="200"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="600"
         />
         <RoadMapGridItem
           chilren={
@@ -93,6 +120,10 @@ const RoadMap = ({ roadmapRef }) => {
               </li>
             </React.Fragment>
           }
+          data-aos="fade-up-left"
+          data-aos-offset="200"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="900"
         />
       </div>
       <BreakingLine />

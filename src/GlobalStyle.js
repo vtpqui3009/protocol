@@ -4,6 +4,7 @@ export const StyledHeader = styled.nav`
   top: 0;
   left: 0;
   right: 0;
+  background: white;
   background: #434343;
   z-index: 10;
   @media (max-width: 480px) {

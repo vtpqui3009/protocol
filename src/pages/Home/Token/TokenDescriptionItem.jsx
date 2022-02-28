@@ -45,7 +45,7 @@ const StyledTokenDescriptionItem = styled.div`
 
 const TokenDescriptionItem = (props) => {
   return (
-    <StyledTokenDescriptionItem className="token-description-item">
+    <StyledTokenDescriptionItem className="token-description-item" {...props}>
       <div
         className="token-description-percentage"
         style={{ background: props.background }}

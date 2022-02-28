@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { Col, Row } from "react-bootstrap";
 import contactsData from "./contactsData";
 import BreakingLine from "../../../components/UI/BreakingLine";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
   color: #ffffff;
   padding: 0 4rem;
+  overflow: hidden;
   & > #contact-social {
     text-align: center;
     margin-top: auto;
@@ -54,6 +56,10 @@ const StyledContainer = styled.div`
   }
 `;
 const ContactUs = ({ contactUsRef }) => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <StyledContainer className="container" id="contact-us" ref={contactUsRef}>
       <h1 id="contact-heading">Contact us</h1>
@@ -61,19 +67,76 @@ const ContactUs = ({ contactUsRef }) => {
         <Col id="contact-form">
           <Row>
             <div className="contact-form-action">
-              <label>Phone or email</label>
-              <input type="text" required />
+              <label
+                data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-easing="ease-in-sine"
+                data-aos-duration="600"
+                data-aos-anchor-placement="center-bottom"
+              >
+                Phone or email
+              </label>
+              <input
+                type="text"
+                required
+                data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-easing="ease-in-sine"
+                data-aos-duration="600"
+                data-aos-anchor-placement="center-bottom"
+              />
             </div>
             <div className="contact-form-action">
-              <label>Name</label>
-              <input type="text" required />{" "}
+              <label
+                data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-easing="ease-in-sine"
+                data-aos-duration="600"
+                data-aos-anchor-placement="center-bottom"
+              >
+                Name
+              </label>
+              <input
+                type="text"
+                required
+                data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-easing="ease-in-sine"
+                data-aos-duration="600"
+                data-aos-anchor-placement="center-bottom"
+              />{" "}
             </div>
             <div className="contact-form-action">
-              <label>Message</label>
-              <textarea required rows={4} cols={50}></textarea>
+              <label
+                data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-easing="ease-in-sine"
+                data-aos-duration="600"
+                data-aos-anchor-placement="center-bottom"
+              >
+                Message
+              </label>
+              <textarea
+                required
+                rows={4}
+                cols={50}
+                data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-easing="ease-in-sine"
+                data-aos-duration="600"
+                data-aos-anchor-placement="center-bottom"
+              ></textarea>
             </div>
             <div className="contact-form-action">
-              <button>Contact Us</button>{" "}
+              <button
+                data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-easing="ease-in-sine"
+                data-aos-duration="600"
+                data-aos-anchor-placement="center-bottom"
+              >
+                Contact Us
+              </button>{" "}
             </div>
           </Row>
         </Col>
