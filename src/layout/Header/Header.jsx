@@ -7,7 +7,7 @@ import Logo from "../../components/Image/Logo";
 const Header = (props) => {
   return (
     <StyledHeader id="header">
-      <Navbar>
+      <Navbar style={{ background: "#434343" }}>
         <Container>
           <Navbar.Brand>
             <Logo />

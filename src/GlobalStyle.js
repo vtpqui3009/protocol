@@ -4,11 +4,11 @@ export const StyledHeader = styled.nav`
   top: 0;
   left: 0;
   right: 0;
-  background: white;
-  background: #434343;
+  bottom: 0;
+  overflow: hidden;
   z-index: 10;
   @media (max-width: 480px) {
-    padding: 0 2rem;
+    ${"" /* padding: 0 2rem; */}
   }
 `;
 export const StyledHeaderLink = styled.div`
@@ -33,6 +33,6 @@ export const StyleHeroBanner = styled.div`
     background-attachment: fixed;
     object-fit: cover;
     width: 100%;
-    height: 100%;
+    height: 100vh;
   }
 `;

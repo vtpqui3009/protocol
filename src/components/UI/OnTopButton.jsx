@@ -11,6 +11,7 @@ const StyledButton = styled.i`
   font-size: 22px;
   cursor: pointer;
   transition: all 0.25s linear;
+  z-index: 999;
 `;
 const OnTopButton = () => {
   const [visible, setVisible] = useState(false);
