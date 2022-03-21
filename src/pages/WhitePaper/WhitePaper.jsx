@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Header from "../../layout/Header/Header";
 const StyledUpdatingPage = styled.div`
   linh-height: 1.7;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   padding: 5% 0;
   background-color: #333;
